@@ -1,0 +1,294 @@
+# ─────────────────────────────────────────────
+# 📁 General Files to Ignore
+# ─────────────────────────────────────────────
+*.pdf
+*.log
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+
+# IDE/Editor settings
+.vscode/
+.idea/
+*.code-workspace
+
+# OS-specific files
+.env
+.env.*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Project-specific ignores
+/prompts-&-examples/
+/other_files/
+
+# ─────────────────────────────────────────────
+# 🐍 Python Global Dependencies & Build Artifacts
+# ─────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+venv_*/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# ─────────────────────────────────────────────
+# 📦 Node.js Global Dependencies & Build Artifacts
+# ─────────────────────────────────────────────
+node_modules/
+dist/
+build/
+package-lock.json
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm/
+.yarn/
+
+# ─────────────────────────────────────────────
+# 📦 Package Files
+# ─────────────────────────────────────────────
+*.zip
+*.tar.gz
+*.tar
+*.7z
+*.rar
+
+# ─────────────────────────────────────────────
+# 📝 Logs & Reports
+# ─────────────────────────────────────────────
+*.log
+logs/
+gdrive_sync.log
+*_sync.log
+
+# ─────────────────────────────────────────────
+# 🐳 Docker Files
+# ─────────────────────────────────────────────
+.docker/
+docker-compose.override.yml
+.dockerignore
+
+# ─────────────────────────────────────────────
+# 🤖 Project 1: CV Evaluator (AI/ML) - Generated/Training Files
+# ─────────────────────────────────────────────
+# Model weights
+outputs/
+checkpoints/
+*.bin
+*.pth
+*.pt
+*.ckpt
+*.h5
+*.pkl
+*.safetensors
+*.onnx
+
+# Trained models
+model_a_prose_evaluator/
+model_b_json_converter/
+cv_evaluator_final/
+cv_evaluator_hybrid_system_*/
+
+# Dataset files
+cv_dataset/
+cv_training_data.zip
+cv_training_data_*.zip
+*_backup_*.zip
+evaluations/
+grpo_datasets/
+
+# Cache and temporary files
+.cache/
+hf_cache/
+.huggingface/
+wandb/
+tensorboard_logs/
+runs/
+
+# ─────────────────────────────────────────────
+# 📊 Data Files
+# ─────────────────────────────────────────────
+*.jsonl
+*.arrow
+*.parquet
+*.feather
+*.hdf5
+*.csv
+*.tsv
+
+# Sample data (keep examples/)
+sample_cvs/
+test_data/
+demo_data/
+
+# ─────────────────────────────────────────────
+# 📓 Jupyter Notebooks
+# ─────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+notebooks/*.html
+notebooks/*_output/
+
+
+
+# ─────────────────────────────────────────────
+# 🧱 Project 2: Backend (NestJS) - Generated/Default Files
+# ─────────────────────────────────────────────
+project2-todo-app/backend/node_modules/
+project2-todo-app/backend/dist/
+project2-todo-app/backend/package-lock.json
+project2-todo-app/backend/nest-cli.json
+project2-todo-app/backend/.prettierrc
+project2-todo-app/backend/.gitignore
+project2-todo-app/backend/test/
+project2-todo-app/backend/eslint.config.mjs
+project2-todo-app/backend/src/app.controller.spec.ts
+project2-todo-app/backend/src/app.service.ts
+project2-todo-app/backend/README.md
+project2-todo-app/backend/.dockerignore
+
+# ─────────────────────────────────────────────
+# 🎨 Project 2: Frontend (React) - Generated/Default Files
+# ─────────────────────────────────────────────
+project2-todo-app/frontend/node_modules/
+project2-todo-app/frontend/build/
+project2-todo-app/frontend/package-lock.json
+project2-todo-app/frontend/public/
+project2-todo-app/frontend/src/index.tsx
+project2-todo-app/frontend/src/index.css
+project2-todo-app/frontend/src/logo.svg
+project2-todo-app/frontend/src/reportWebVitals.ts
+project2-todo-app/frontend/src/setupTests.ts
+project2-todo-app/frontend/src/App.test.tsx
+project2-todo-app/frontend/src/App.css
+project2-todo-app/frontend/src/react-app-env.d.ts
+project2-todo-app/frontend/README.md
+project2-todo-app/frontend/.dockerignore
+project2-todo-app/frontend/nginx.conf
+
+# ─────────────────────────────────────────────
+# 📝 Documentation & Temporary Files
+# ─────────────────────────────────────────────
+project2-todo-app/PROJECT_2_README.md
+
+# ─────────────────────────────────────────────
+# 🔗 Project 3: LangGraph Map-Reduce - Generated/Temporary Files
+# ─────────────────────────────────────────────
+project3-langgraph-mapreduce/.langgraph_api/
+project3-langgraph-mapreduce/__pycache__/
+project3-langgraph-mapreduce/venv_*/
+project3-langgraph-mapreduce/.pytest_cache/
+project3-langgraph-mapreduce/*.pyc
+project3-langgraph-mapreduce/.coverage
+project3-langgraph-mapreduce/htmlcov/
+
+# LangGraph Studio generated files
+project3-langgraph-mapreduce/.langgraph/
+project3-langgraph-mapreduce/langgraph.db
+project3-langgraph-mapreduce/langgraph.sqlite
+
+# Test files (if we had kept them)
+project3-langgraph-mapreduce/test_*.py
+project3-langgraph-mapreduce/*_test.py
+
+# ─────────────────────────────────────────────
+# ✅ Files We're Tracking (Custom Implementation)
+# ─────────────────────────────────────────────
+
+# Project 1: CV Evaluator Custom Files:
+# ✅ project1-cv-evaluator/configs/ (entire folder)
+# ✅ project1-cv-evaluator/data/ (entire folder)
+# ✅ project1-cv-evaluator/models/ (entire folder)
+# ✅ project1-cv-evaluator/utils/ (entire folder)
+# ✅ project1-cv-evaluator/examples/ (entire folder)
+# ✅ project1-cv-evaluator/docker/ (entire folder)
+# ✅ project1-cv-evaluator/colab/ (entire folder)
+# ✅ project1-cv-evaluator/README.md
+# ✅ project1-cv-evaluator/requirements.txt
+# ✅ project1-cv-evaluator/setup.py
+# ✅ project1-cv-evaluator/train.py
+
+# Backend Custom Files (Project 2):
+# ✅ project2-todo-app/backend/src/todos/ (entire folder)
+# ✅ project2-todo-app/backend/src/app.module.ts
+# ✅ project2-todo-app/backend/src/main.ts
+# ✅ project2-todo-app/backend/package.json
+# ✅ project2-todo-app/backend/tsconfig.json
+# ✅ project2-todo-app/backend/Dockerfile
+
+# Frontend Custom Files (Project 2):
+# ✅ project2-todo-app/frontend/src/types/
+# ✅ project2-todo-app/frontend/src/services/
+# ✅ project2-todo-app/frontend/src/store/
+# ✅ project2-todo-app/frontend/src/utils/
+# ✅ project2-todo-app/frontend/src/components/
+# ✅ project2-todo-app/frontend/src/App.tsx
+# ✅ project2-todo-app/frontend/package.json
+# ✅ project2-todo-app/frontend/tsconfig.json
+# ✅ project2-todo-app/frontend/Dockerfile
+# ✅ project2-todo-app/frontend/Dockerfile.dev
+
+# Infrastructure (Project 2):
+# ✅ project2-todo-app/docker-compose.yml
+# ✅ project2-todo-app/docker-compose.dev.yml
+# ✅ project2-todo-app/README.md
+
+# LangGraph Map-Reduce Custom Files (Project 3):
+# ✅ project3-langgraph-mapreduce/app.py
+# ✅ project3-langgraph-mapreduce/langgraph_mapreduce.py  
+# ✅ project3-langgraph-mapreduce/requirements.txt
+# ✅ project3-langgraph-mapreduce/Dockerfile
+# ✅ project3-langgraph-mapreduce/docker-compose.yml
+# ✅ project3-langgraph-mapreduce/langgraph.json
+# ✅ project3-langgraph-mapreduce/.env (configuration file)
+# ✅ project3-langgraph-mapreduce/README.md
