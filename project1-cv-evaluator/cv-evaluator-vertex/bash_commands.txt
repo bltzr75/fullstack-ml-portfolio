@@ -1,0 +1,104 @@
+# COMPLETE DEPLOYMENT COMMANDS FOR CV EVALUATOR
+# Replace placeholders with your actual values
+
+# 1. INITIAL SETUP (first time only)
+# ----------------------------------
+
+# Authenticate with Google Cloud
+gcloud auth login
+
+# Set up Application Default Credentials (required for Vertex AI)
+gcloud auth application-default login
+
+# Set your project
+gcloud config set project YOUR-PROJECT-ID
+
+# Enable the service
+gcloud services enable aiplatform.googleapis.com
+
+
+# Create bucket (only if it doesn't exist)
+gsutil mb -l us-central1 gs://YOUR-BUCKET-NAME
+
+# Install Python dependencies
+pip install python-dotenv google-cloud-aiplatform
+
+
+# 2. DEPLOY MODEL
+# ---------------
+
+# Navigate to the cv-evaluator-vertex directory
+cd /path/to/cv-evaluator-vertex
+
+# Deploy to Vertex AI
+python3 deploy.py
+
+# After deployment completes, add the ENDPOINT_ID to your .env file
+# Example: ENDPOINT_ID=projects/YOUR-PROJECT-ID/locations/us-central1/endpoints/xxxxx
+
+
+# 3. TEST DEPLOYMENT
+# ------------------
+
+# Test the endpoint (after adding ENDPOINT_ID to .env)
+python3 test_vertex.py
+
+
+# 4. CLEANUP (important to avoid charges!)
+# -----------------------------------------
+
+# Easy cleanup with script
+python3 cleanup.py
+
+# OR manual cleanup if script fails:
+# First, get the deployed model ID
+gcloud ai endpoints describe ENDPOINT_ID --region=us-central1
+
+# Undeploy the model
+gcloud ai endpoints undeploy-model ENDPOINT_ID \
+  --deployed-model-id=DEPLOYED_MODEL_ID \
+  --region=us-central1
+
+# Delete the endpoint
+gcloud ai endpoints delete ENDPOINT_ID --region=us-central1
+
+# List and delete models (optional)
+gcloud ai models list --region=us-central1
+gcloud ai models delete MODEL_ID --region=us-central1
+
+
+# 5. QUICK REDEPLOYMENT (for demo)
+# ---------------------------------
+
+# Just run these two commands:
+python3 deploy.py
+# Update .env with new ENDPOINT_ID
+python3 test_vertex.py
+
+
+# 6. CHECK COSTS
+# --------------
+
+# View current billing
+gcloud billing accounts list
+gcloud alpha billing budgets list
+
+# Check Vertex AI usage
+gcloud logging read "resource.type=aiplatform.googleapis.com/Endpoint" --limit 10
+
+
+# 7. USEFUL COMMANDS
+# ------------------
+
+# List all endpoints
+gcloud ai endpoints list --region=us-central1
+
+# Check bucket contents
+gsutil ls -la gs://YOUR-BUCKET-NAME/cv-evaluator/
+
+# Remove all files from bucket (careful!)
+# gsutil -m rm -r gs://YOUR-BUCKET-NAME/cv-evaluator/*
+
+# Check if you're authenticated
+gcloud auth list
+gcloud config list
