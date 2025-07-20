@@ -1,0 +1,12 @@
+{
+  "dependencies": [
+    "langgraph>=0.0.40",
+    "langchain>=0.1.0",
+    "langchain-core>=0.1.0",
+    "flask>=2.3.0"
+  ],
+  "graphs": {
+    "mapreduce": "./langgraph_mapreduce.py:create_mapreduce_graph"
+  },
+  "env": ".env"
+}
