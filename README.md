@@ -65,22 +65,6 @@ Build a fine-tuned LLM that evaluates CVs against 10 criteria and returns struct
    }
    ```
 
-4. **Dataset Design**
-
-   * Describe the structure of your training dataset
-   * How would you generate/collect CV evaluation examples?
-   * What data augmentation techniques would you use?
-
-#### Deliverables
-
-* Complete PyTorch implementation with LoRA and GRPO
-* Training script and model configuration
-* Dataset design documentation
-* Requirements file and Dockerfile
-* Comprehensive README with setup instructions
-* Organize your code structure as you see fit
-
-
 ---
 
 ## Project 2 — Todo List Application (NestJS + React)
