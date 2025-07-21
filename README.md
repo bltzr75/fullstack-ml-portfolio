@@ -248,15 +248,6 @@ curl -X POST localhost:5000/sum_of_squares \
   -d '{"length": 10}'
 ```
 
-#### Deliverables
-
-* Complete LangGraph implementation with Send API
-* Flask application wrapper
-* Docker setup for easy deployment
-* LangGraph Studio screen recording (60–90 seconds)
-* README with setup and usage instructions
-* Organize your code structure as you see fit
-
 ---
 
 ## Repository Structure
@@ -268,9 +259,3 @@ project3-langgraph-mapreduce/
 README.md
 ```
 
-## Setup and Usage
-
-* Each project includes Docker setup for easy local development
-* Projects can be run independently
-* Comprehensive documentation included in respective folders
-* Demo videos showcase all functionality
